@@ -1,0 +1,245 @@
+/*#############################################################
+## GENERAL
+/*###########################################################*/
+/*-------------------------------
+# FONT : External
+--------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,900&display=swap");
+/*-------------------------------
+# SASS: Mixin
+--------------------------------*/
+/*-------------------------------
+# SASS: Breakpoints
+--------------------------------*/
+/*#############################################################
+## Reset
+/*###########################################################*/
+/*-------------------------------
+# Default Variables
+--------------------------------*/
+/*-------------------------------
+# Body
+--------------------------------*/
+body {
+  font-family: "Nunito";
+  color: #000000;
+  background-color: #ffffff;
+  font-size: 16px;
+  font-style: normal; }
+
+/*-------------------------------
+# Header
+--------------------------------*/
+label,
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: "Nunito";
+  color: #000000;
+  font-size: 18px;
+  font-weight: 800; }
+
+h1, .h1 {
+  font-size: 50px; }
+
+h2, .h2 {
+  font-size: 32px; }
+
+h3, .h3 {
+  font-size: 18px; }
+
+h4, .h4 {
+  font-size: 18px; }
+
+h5, .h5 {
+  font-size: 18px; }
+
+h6, .h6 {
+  font-size: 18px; }
+
+/*-------------------------------
+# Link
+--------------------------------*/
+a, a:link, a:focus, a:hover, a:visited, a:active {
+  color: #e87f22;
+  text-decoration: none;
+  outline: none; }
+
+/*-------------------------------
+# Bold
+--------------------------------*/
+b, strong {
+  font-weight: bold; }
+
+/*-------------------------------
+# Ialic
+--------------------------------*/
+i, em {
+  font-style: italic; }
+
+/*-------------------------------
+# Bullet
+--------------------------------*/
+ul, ol {
+  margin: 0 0 1rem 0;
+  padding: 0 0 0 1rem;
+  display: block; }
+  ul li, ol li {
+    margin-bottom: 5px; }
+    ul li:last-child, ol li:last-child {
+      margin-bottom: 0; }
+
+/*-------------------------------
+# Blockquote
+--------------------------------*/
+blockquote > *:first-child:before {
+  content: '"';
+  display: inline-block;
+  font-family: inherit;
+  color: inherit;
+  font-size: inherit;
+  margin-right: 5px; }
+blockquote > *:last-child:after {
+  content: '"';
+  display: inline-block;
+  font-family: inherit;
+  color: inherit;
+  font-size: inherit;
+  margin-left: 5px; }
+
+/*#############################################################
+## Image
+/*###########################################################*/
+img {
+  height: auto;
+  max-width: 100%; }
+
+/*#############################################################
+## Forms
+/*###########################################################*/
+/*-------------------------------
+# Inputs
+--------------------------------*/
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+select,
+textarea {
+  padding: 8px;
+  bottom: 0;
+  width: 100%; }
+
+/*-------------------------------
+# Placeholder
+--------------------------------*/
+::-webkit-input-placeholder {
+  color: gray;
+  opacity: 1;
+  font-family: inherit; }
+
+:-moz-placeholder {
+  color: gray;
+  opacity: 1;
+  font-family: inherit; }
+
+::-moz-placeholder {
+  color: gray;
+  opacity: 1;
+  font-family: inherit; }
+
+:-ms-input-placeholder {
+  color: gray;
+  opacity: 1;
+  font-family: inherit; }
+
+:focus::placeholder {
+  opacity: 0.5; }
+
+:focus::-webkit-input-placeholder {
+  opacity: 0.5; }
+
+:focus:-moz-placeholder {
+  opacity: 0.5; }
+
+:focus::-moz-placeholder {
+  opacity: 0.5; }
+
+:focus:-ms-input-placeholder {
+  opacity: 0.5; }
+
+/*#############################################################
+## Custom Button
+/*###########################################################*/
+/*-------------------------------
+# Custom Button | button-primary
+--------------------------------*/
+.button.button-primary, .button.button-primary:link, .button.button-primary:focus, .button.button-primary:visited, .button.button-primary:active, .button.button-primary:hover {
+  background-color: #dedede !important;
+  background-image: none;
+  color: #000000 !important;
+  border: 1px solid #dedede !important;
+  border-radius: 3px !important;
+  font-size: 1em;
+  line-height: 1.5;
+  word-wrap: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 400;
+  font-family: inherit;
+  cursor: pointer;
+  display: inline-block;
+  padding: .5rem 1rem;
+  margin: 0;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -ms-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s; }
+
+.button.button-primary:hover {
+  opacity: 0.80; }
+
+/*#############################################################
+## Wordpress
+/*###########################################################*/
+#wpadminbar {
+  z-index: 9999; }
+  #wpadminbar * {
+    color: #fff; }
+
+.post, .page {
+  margin: 0; }
+
+/*#############################################################
+## Bootstrap Styling
+/*###########################################################*/
+/*-------------------------------
+# Bootstrap Container
+--------------------------------*/
+.container-fluid {
+  max-width: 1600px; }
+
+.container {
+  max-width: 1140px; }
+
+/*#############################################################
+## START
+/*###########################################################*/
+
+/*# sourceMappingURL=style-main.css.map */

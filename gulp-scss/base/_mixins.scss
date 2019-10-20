@@ -1,0 +1,124 @@
+/*-------------------------------
+# SASS: Mixin
+--------------------------------*/
+@mixin transition($property, $duration, $method, $delay) {
+  -webkit-transition: $property $duration $method $delay;
+  -moz-transition: $property $duration $method $delay;
+  -ms-transition: $property $duration $method $delay;
+  -o-transition: $property $duration $method $delay;
+  transition: $property $duration $method $delay;
+}
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+  // Multiple transform:
+  // transform(translate(XX, XX) rotate(XXdeg))
+}
+@mixin transform-origin($origin) {
+  -moz-transform-origin: $origin;
+  -o-transform-origin: $origin;
+  -ms-transform-origin: $origin;
+  -webkit-transform-origin: $origin;
+  transform-origin: $origin;
+}
+@mixin writing-mode($position) {
+  -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: $position;
+  -moz-writing-mode: $position;
+  -ms-writing-mode: $position;
+  writing-mode: $position;
+}
+// @include user-select(none);
+@mixin user-select($value) {
+  -webkit-touch-callout: $value;
+  -webkit-user-select: $value;
+  -khtml-user-select: $value;
+  -moz-user-select: $value;
+  -ms-user-select: $value;
+  user-select: $value;
+}
+@mixin placeholder-default {
+  // Placeholder Default
+  ::-webkit-input-placeholder {
+    @content;
+  }
+  :-moz-placeholder {
+    @content;
+  }
+  ::-moz-placeholder {
+    @content;
+  }
+  :-ms-input-placeholder {
+    @content;
+  }
+  // Placeholder Focused State
+  :focus::placeholder {
+    opacity: 0.5;
+  }
+  :focus::-webkit-input-placeholder {
+    opacity: 0.5;
+  }
+  :focus:-moz-placeholder {
+    opacity: 0.5;
+  }
+  :focus::-moz-placeholder {
+    opacity: 0.5;
+  }
+  :focus:-ms-input-placeholder {
+    opacity: 0.5;
+  }
+}
+@mixin background($position, $first-color, $second-color) {
+  background: $second-color;
+  background: -webkit-linear-gradient($position, $first-color, $second-color);
+  background: -o-linear-gradient($position, $first-color, $second-color);
+  background: -moz-linear-gradient($position, $first-color, $second-color);
+  background: linear-gradient(to $position, $first-color, $second-color);
+}
+/*-------------------------------
+# SASS: Breakpoints
+--------------------------------*/
+@mixin breakpoint($point) {
+  // @include breakpoint(above-medium)
+  @if $point == above-medium {
+    @media only screen and (min-width: 768px) {
+      @content;
+    }
+  }
+  // @include breakpoint(below-medium)
+  @if $point == below-medium {
+    @media only screen and (max-width: 767px) {
+      @content;
+    }
+  }
+}
+
+// -- Other mixins
+@mixin font-face($font-name, $file-name, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: quote($font-name);
+    src: url($file-name+".eot");
+    src: url($file-name+".eot?#iefix") format("embedded-opentype"),
+      url($file-name+".woff") format("woff"),
+      url($file-name+".ttf") format("truetype"),
+      url($file-name+".svg##{$font-name}") format("svg");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+// Usage: @include font-face('gotham', '/fonts/gotham');
+
+@mixin box($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+// Opacity with fallback for IE8+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity = $opacity-ie); //IE8
+}
