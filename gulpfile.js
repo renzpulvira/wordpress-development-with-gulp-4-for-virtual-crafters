@@ -109,7 +109,7 @@ function watchFiles() {
   });
 
   // Watch Root files
-  watch(["./*"]).on("change", event => {
+  watch(["./**"]).on("change", event => {
     bs.reload();
     return src([event], { base: ".", buffer: false })
       .pipe(conn.newer(ftpConfig.remoteFolder))

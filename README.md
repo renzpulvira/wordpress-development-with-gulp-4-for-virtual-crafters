@@ -15,10 +15,11 @@
 
 > info: You need [git](https://git-scm.com/download/win) to clone the repo.
 
-1. Clone my git repo
+1. Clone my git repo and cd into the folder.
 
 ```bash
-> git clone https://github.com/renzpulvira/wordpress-dev-with-gulp.git
+> git clone https://github.com/renzpulvira/wordpress-development-with-gulp-4-for-virtual-crafters.git
+> cd wordpress-development-with-gulp-4-for-virtual-crafters
 ```
 
 2. Install packages using npm
@@ -68,7 +69,8 @@ const ftpConfig = {
   host: "myHost",
   user: "myUsername",
   pass: "myPassword",
-  remoteFolder: "/wp-content/themes/sampleTheme"
+  remoteFolder: "/wp-content/themes/sampleTheme",
+  siteUrl: "yoursite.dev"
 };
 ```
 
@@ -109,3 +111,6 @@ var globs = [
 
 - gulp not found error
   follow the front page of [gulpjs](https://gulpjs.com/)
+
+- Sometimes the page doesn't reflect my changes on change.
+  `Open your devtools > navigate to network > disable caching`
